@@ -1,15 +1,15 @@
 body{
 	margin:0;
+	background-image: url("images/skys.png");
+	background-repeat: repeat;
+	background-color: black;
 }
 
 #header{
-	background-color: black;
-	height: 100%;
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background-image: url("images/skys.png");
-	background-repeat: repeat;
+	z-index: 100;
 	}
 #content{
 	margin-bottom: 20px;
