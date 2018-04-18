@@ -1,0 +1,50 @@
+body{
+	margin:0;
+}
+
+#header{
+	background-color: black;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-image: url("images/skys.png");
+	background-repeat: repeat;
+	}
+#content{
+	margin-bottom: 20px;
+	position: absolute;
+	top: 50px;
+}
+#container{
+	max-width: 900px;
+}
+.itemTitle{
+	font-size:17px;
+	font-weight:bold;
+}
+.tekst {
+	text-align: left;
+	font-size:16px;
+	font-family:Helvetica;
+	color:#cccccc;
+	padding: 10px;
+}
+
+#final-text{
+	font-size:16px;
+	font-family:Helvetica;
+	color:#cccccc;
+	padding: 10px;
+}
+.itemData{
+	margin-top: 15px;
+}
+.outer {
+	width: 100%;
+	text-align: center;
+}
+.inner {
+	display: inline-block;
+	width: auto;
+}
