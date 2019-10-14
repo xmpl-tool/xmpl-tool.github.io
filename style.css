@@ -1,3 +1,5 @@
+
+
 body{
 margin:0;
 }
@@ -12,6 +14,26 @@ table, th, td {
 	padding: 10px;
 
 }
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: darkblue;
+  text-decoration: underline;
+} 
+
 #header{
     background-color: black;
     height: 300px;
@@ -38,6 +60,22 @@ table, th, td {
 	margin-top:60px;
 	
 }
+
+.command{
+	color:#1a75ff;
+	font-family: monospace;
+	font-size:15px;
+	font-weight:bold;
+	padding-top:10px;
+}
+
+.config {
+	color:darkblue;
+	font-family: monospace;
+	padding:5px;
+
+}
+
 .itemTitle{
 	font-size:17px;
 	font-weight:bold;
@@ -46,8 +84,13 @@ table, th, td {
 	text-align: left;
 	font-size:16px;
 	font-family:Helvetica;
-	color:#333333;
- 
+	color:#333333; 
+	font-weight:normal;
+
+}
+
+.alignLeft{
+	text-align: left;
 }
 .pad{
 	padding-left:145px;	
@@ -63,6 +106,9 @@ table, th, td {
 	color:white;
 	font-family:monospace;
 	padding:5px;
+
+	margin-left:0px;
+	margin-right:0px;
 }
 .outer {
 	width: 100%;
@@ -73,12 +119,67 @@ table, th, td {
 	display: inline-block;
 	width: auto;
 }
-.sectionTitle{
+
+.mainTitle{
+	font-size:18px;
 	font-family:"Arial";
 	font-weight:bold;
-	margin-bottom:5px;	
+	margin-bottom:10px;	
+	text-align:left;	
+}
+.sectionTitle{
+	font-size:17px;
+	font-family:"Arial";
+	font-weight:bold;
+	margin-bottom:10px;	
+	text-align:left;	
+}
+.sectionTitle2{
+	font-size:15px;
+	font-family:"Arial";
+	font-weight:bold;
+	margin-bottom:10px;	
 	text-align:left;
+}
+
+.sectionTitle3{
+	font-size:14px;
+	font-family:"Arial";
+	margin-bottom:5px;	
+	text-align:left;	
+	font-weight:bold;
+}
+
+.swtext{
+	display:none;
+
+}
+.text{
+	font-size:15px;
+	font-weight:normal;
+}
+.odlomak{
+	margin-left:5px;
+
+}
+.box{
+	margin-bottom:30px;
+}
+
+.switch{
+	margin-top:5px;
+	font-family:"Arial";
+	font-size:12px;
+}
+
+.video{
+	z-index:1000;
+	margin-bottom: -27px;
 	
+}
+.tip{
+	 font-style: italic;
+	color:gray;
 }
 
 #footer{
@@ -196,10 +297,7 @@ top:100px;
 	padding:1px;
     }
 
-.code{
-	margin-left:0px;
-	margin-right:0px;
-}
+
 .inner {
   width: 300px;
 }

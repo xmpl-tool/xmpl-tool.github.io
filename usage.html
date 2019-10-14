@@ -9,7 +9,9 @@
 <meta name="keywords" content="xmpl tool,xmpl,xmpl-tool,xmpltool,xmpl project,linux,unix,open source,bash,linux examples,linux examples database, linux examples repositorie,linux usage examples,linux console,linux console usage,linux terminal,linux command examples,linux shell examples">
 
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="console.css">
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
 <script type="text/javascript" src="resize.js" ></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117933495-1"></script>
@@ -27,10 +29,12 @@
 	  "logo": "https://xmpl-tool.github.io/images/xmpl-project.png"
 	}
 
+
+
 </script>
 
 </head>
-<body>
+<body onload="myFunction()">
 <div id="header">
 <a href="https://www.github.com/xmpl-tool" target="_blank" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#fff; color:#151513; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -58,22 +62,1443 @@
 <div id="content" class="outer">
 
 <div class="item inner">
+<div class="sectionTitle2"><a href="#s_system_operations">1. System operations</a></div>
+<div class="odlomak">
+	<div class="sectionTitle2"><a href="#s_installation">1.1. Installation</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_requirements">1.1.1. Requirements</a></div>
+		<div class="sectionTitle2"><a href="#s_downloading_xmpl_tool">1.1.2. Downloading Xmpl tool from GitHub</a></div>
+		<div class="sectionTitle2"><a href="#s_automated_installation">1.1.3. Automated installation</a></div>
+		<div class="odlomak">
+			<div class="sectionTitle2"><a href="#s_xmpl_installation">1.1.3.1. Automated installation of Xmpl tool</a></div>
+			<div class="sectionTitle2"><a href="#s_automated_repo_installation">1.1.3.2. Automated installation of local repositories</a></div>
+			<div class="sectionTitle2"><a href="#s_private_repo_installation">1.1.3.3. Adding a private repository with installation</a></div>
+		</div>
+		<div class="sectionTitle2"><a href="#s_manual_installation">1.1.4. Manual installation</a></div>
+		<div class="odlomak">
+			<div class="sectionTitle2"><a href="#s_manual_xmpl_installation">1.1.4.1. Manual installation of Xmpl tool</a></div>
+			<div class="sectionTitle2"><a href="#s_manual_repo_installation">1.1.4.2. Manual installation of local repositories</a></div>
+		</div>
+	</div>
+	<div class="sectionTitle2"><a href="#s_updating_xmpl">1.2. Updating Xmpl tool</a></div>
+	<div class="sectionTitle2"><a href="#s_xmpl_uninstall">1.3. Uninstalling Xmpl tool</a></div>
+</div>
+<div class="sectionTitle2"><a href="#s_working_with_examples">2. Working with examples</a></div>
+<div class="odlomak">
+	<div class="sectionTitle2"><a href="#s_listing_packages">2.1. Listing available packages</a></div>
+	<div class="sectionTitle2"><a href="#s_searching_examples">2.2. Searching examples</a></div>
+	<div class="sectionTitle2"><a href="#s_filtering_packages">2.3. Filtering by package name</a></div>
+	<div class="sectionTitle2"><a href="#s_comments">2.4. Comments in examples</a></div>
+	<div class="sectionTitle2"><a href="#s_raw_examples">2.5. Raw examples</a></div>
+	<div class="sectionTitle2"><a href="#s_online_mode">2.6. Online mode</a></div>
+	<div class="sectionTitle2"><a href="#s_full_online_mode">2.7. Online mode with descriptions</a></div>
+	<div class="sectionTitle2"><a href="#s_input_mode">2.8. User input mode</a></div>
+	<div class="sectionTitle2"><a href="#s_execute_mode">2.9. Execute mode</a></div>
+	<div class="sectionTitle2"><a href="#s_last_example">2.10. Last used example</a></div>
+	<div class="sectionTitle2"><a href="#s_execute_last">2.11. Executing last used example</a></div>
+</div>
+<div class="sectionTitle2"><a href="#s_working_with_repositories">3. Working with repositories</a></div>
+<div class="odlomak">
+	<div class="sectionTitle2"><a href="#s_adding_repository">3.1. Adding a new repository</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_adding_private_repo">3.1.1. Adding private Xmpl repository</a></div>
+		<div class="sectionTitle2"><a href="#s_custom_repo">3.1.2. Adding a custom repository</a></div>
+		<div class="odlomak">
+			<div class="sectionTitle2"><a href="#s_preparing_custom_repo">3.1.2.1. Preparing a new custom repository for Xmpl</a></div>
+			<div class="sectionTitle2"><a href="#s_adding_custom_repo">3.1.2.2. Adding a custom repository in Xmpl tool</a></div>
+		</div>
+	</div>
+	<div class="sectionTitle2"><a href="#s_changing_repo">3.2. Changing repository</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_quick_change_repo">3.2.1. Quick change repository</a></div>
+		<div class="sectionTitle2"><a href="#s_setting_default_repo">3.2.2. Setting default repository</a></div>
+	</div>
+	<div class="sectionTitle2"><a href="#s_working_with_local_examples">3.3. Working with examples in a local repository</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_editing_examples">3.3.1. Editing examples</a></div>
+		<div class="sectionTitle2"><a href="#s_editing_with_editor">3.3.2. Editing examples with the default text editor</a></div>
+		<div class="sectionTitle2"><a href="#s_deleting_examples">3.3.3. Deleting examples or packages</a></div>
+	</div>
+	<div class="sectionTitle2"><a href="#s_synchronizing_repos">3.4. Synchronizing local and remote repositories</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_synchronizing_main_repo">3.4.1. Synchronizing Xmpl main repository</a></div>
+		<div class="sectionTitle2"><a href="#s_synchronizing_private_repo">3.4.2. Synchronizing Xmpl private repository</a></div>	
+	</div>
+	<div class="sectionTitle2"><a href="#s_publication">3.5. Publication of changes</a></div>
+	<div class="sectionTitle2"><a href="#s_deliting_repository">3.6. Deleting a local repository</a></div>
+</div>
+<div class="sectionTitle2"><a href="#s_other_options">4. Other options</a></div>
+<div class="odlomak">
+	<div class="sectionTitle2"><a href="#s_show_version">4.1. Show version</a></div>
+	<div class="sectionTitle2"><a href="#s_show_help">4.2. Show help</a></div>
+	<div class="odlomak">
+		<div class="sectionTitle2"><a href="#s_noinstall_help">4.2.1. Help in no-install usage</a></div>
+		<div class="sectionTitle2"><a href="#s_full_help">4.2.2. Help in installed usage</a></div>
+	</div>
+</div>
+<br><br>
+<div id="s_system_operations" class="mainTitle">1. System operations</div>
+<div class="odlomak">
+<div id="s_installation" class="sectionTitle">1.1. Installation</div>
 
-<div class="item inner">
-<div class="sectionTitle">Video preview:</div>
-<script src="https://asciinema.org/a/176967.js" id="asciicast-176967" async data-autoplay="false" data-loop="true"></script>
+<div class="alignLeft itemData odlomak">
+<div id="s_requirements" class="sectionTitle">1.1.1. Requirements</div>
+<div class="box">
+	<div class="tekst odlomak documentation">
+	<p>Xmpl tool is a free and Open source Bash script, developed by the Xmpl project community. It runs on most Linux/Unix distributions with a Bash console.</p>
+	<p>These 3 packages are required to run Xmpl tool: </p>
+	 <ul>
+	  <li><i>curl</i></li>
+	  <li><i>jq</i></li>
+	  <li><i>git</i></li>
+	</ul> 
+	<p>For no install working mode, it is enough to have these packages installed and the Xmpl tool downloaded on the local machine.<p>
+	<p>In this mode, an active Internet connection is required, because all the results are being fetched directly from the GitHub repository.</p>
+	<p>For working with private repositories, a valid GitHub account is required.</p>
+	<p>Before using Xmpl tool with private repositories, please configure <i>git</i>, as described on GitHub help pages:</p>
+	<p><a href="https://help.github.com/en/articles/setting-your-username-in-git" target="_blank" />https://help.github.com/en/articles/setting-your-username-in-git</a></p>
+	<p><a href="https://help.github.com/en/articles/setting-your-commit-email-address#setting-your-commit-email-address-in-git" target="_blank" />https://help.github.com/en/articles/setting-your-commit-email-address</a></p>
+
+
+	</div>
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_downloading_xmpl_tool" class="sectionTitle">1.1.2. Downloading Xmpl tool from GitHub</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<p>The simplest way of downloading the latest version of Xmpl tool from GitHub is to use <i>git</i>:</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> git clone https://github.com/xmpl-tool/xmpl-script.git</pre>
+	</div>
+	<p>The downloaded Xmpl tool is located in the <i>xmpl-script</i> directory under the name <i>xmpl.sh</i>.</p>
+
+<p>Downloaded script should have executable file permissions.</p>
 </div>
-<div class="item inner">
-<div class="sectionTitle">Documentation:</div>
-<div class="tekst itemData">Coming soon<br>
+
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_automated_installation" class="sectionTitle">1.1.3. Automated installation</div>
+<div class="box">
+	<div class="documentation tekst odlomak">
+	<div id="s_xmpl_installation" class="sectionTitle2">1.1.3.1. Automated installation of Xmpl tool</div>
+	<div class="odlomak">
+		<div class="command">--install -I</div>
+		<p>For automated installation of Xmpl tool on a local machine, run the script file with the <i>--install</i> or <i>-I</i> flag in the Bash console, with superuser privileges.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> sudo bash xmpl.sh -I</pre>
+		</div>
+		<p>After running the Xmpl tool automated installation, you have to confirm the installation.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">Do you really want to install xmpl-tool 1.0.9 on your local system? [Y/n]</pre>
+		</div>
+		<p>After confirmation, all required dependencies will be installed, and the Xmpl tool will be set up for working in online mode.</p>
+		<p>If everything worked Xmpl tool will display this message: </p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="f3">xmpl-tool 1.0.9 installed seccessfully!</span></pre>
+		</div>
+
+	</div>
+
+	<div id="s_automated_repo_installation" class="sectionTitle2">1.1.3.2. Automated installation of local repositories</div>
+	<div class="odlomak">
+		<div class="command">--install -I</div>
+		<p>To enable offline working mode, and working mode with local repositories, it is necessary to proceed with the installation or run it again later.</p>
+		<p>After installing the Xmpl tool on the local machine, the message will be displayed for the continuing installation of a local repository.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">Do you want to download examples repositiry and use it locally? [Y/n]</pre>
+		</div>
+		<p>After confirming this step, the Xmpl main repository will be installed on the local machine, with the local pseudonym <i>main</i>, as described in <i>Manual installation with local repositories (1.1.3.2)</i>.</p>
+
+		
+	</div>
+	<div id="s_private_repo_installation" class="sectionTitle2">1.1.3.3. Adding a private repository with installation</div>
+	<div class="odlomak">
+		<div class="command">--install -I</div>
+		<p>To work with private repositories, it is necessary to have a GitHub account.</p>
+		<p>Following the installation, the Xmpl tool will offer an option to use private repositories:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">Do you want to crate a private repository on GitHub, and share your examples with the community? [Y/n]</pre>
+		</div>
+		<p>After confirming this step, the user will be asked to enter a GitHub username and the desired repository alias for the new local repository.</p>
+		<p>If the user did not fork the Xmpl main repository on their GitHub profile, the Xmpl tool will request authorization for forking Xmpl main repository to their GitHub profile.</p>
+		<p>At the end of the installation, a forked repository from the GitHub user account will be downloaded to the local machine.</p>
+			</div>
+	</div>
+</div></div>
+
 </div>
+
+
+
+<div id="s_manual_installation" class="alignLeft itemData odlomak"><div class="sectionTitle">1.1.4. Manual installation</div>
+<div class="box">
+	<div class="documentation tekst odlomak">
+	<div id="s_manual_xmpl_installation" class="sectionTitle2">1.1.4.1. Manual installation of Xmpl tool</div>
+	<div class="odlomak">
+		<p>For the manual installation of the Xmpl tool on the local machine, you will have to copy the <i>xmpl.sh</i> script, to local path <i>/usr/local/bin/</i> with filename xmpl:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> sudo cp xmpl.sh /usr/local/bin/xmpl</pre>
+		</div>
+		<p>The Xmpl tool is designed to work as a sourced script in the user environment where the script is running. This option is necessary to enable all functionalities.</p>
+
+		<p>Some Xmpl examples may not work if the Xmpl tool is not running as a sourced script.</p>
+		<p>To manually install Xmpl tool as a sourced script, it is necessary to add an alias for Xmpl tool in <i>~/.bashrc</i> file:</p>
+		<p>To execute the last used example with the sudo command, it is necessary to add a line in the <i>/etc/sudoers</i> file that allows the use of specific Xmpl variables with the sudo command:</p>
+		<p>In order to work in shell interpreters other than Bash, you will have to make the appropriate configuration in your interpreter’s configuration files. </p>
+		
+
+	</div>
+
+	<div id="s_manual_repo_installation" class="sectionTitle2">1.1.4.2. Manual installation with local repositories</div>
+	<div class="odlomak">
+		<p>To manually enable working with local repositories, create a user repo directory:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> mkdir ~/.xmpl/repos/xmpl-tool</pre>
+		</div>
+		<p>(where the GitHub username is <i>xmpl-tool</i>)</p>
+		<p>Clone the GitHub repo into the newly created directory:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> git clone https://github.com/xmpl-tool/xmpl-repo ~/.xmpl/repos/xmpl-tool/xmpl-repo</pre>
+		</div>
+		<p>This method can be used to create custom repositories, changing the directory name and the GitHub address respectively.</p>
+		<p>To enable the repository in the Xmpl tool, you need to create a <i>repo.conf</i> file in the <i>~/.xmpl directory</i>. The file should contain the repository pseudonym on the local system (<i>main</i>) with the GitHub username and GitHub repository name written in the format: <i>github_user/github_repo</i></p>
+		<p>Example of <i>repo.conf</i> file:</p>
+		<div class="config">main=xmpl-tool/xmpl-repo</div>
+		<p>To complete the installation, you need to create an <i>xmpl.conf</i> file with the <i>XMPL_DEFAULT_REPO</i> variable in the <i>~/.xmpl</i> directory, which defines the current local pseudonym of the local repository (<i>main</i>).</p>
+		<p>Example of <i>xmpl.conf</i> file:</p>
+		<div class="config">XMPL_DEFAULT_REPO=main</div>
+	</div>
+</div></div>
+
 </div>
+
+<div id="s_updating_xmpl" class="sectionTitle">1.2. Updating Xmpl tool</div>
+
+
+	<div class="tekst odlomak documentation">
+	<div class="command">--update -U</div>
+	<p>Updating an installation of Xmpl tool is done with the option <i>--update</i> or <i>-U</i>. The command needs to be executed with superuser privileges.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> sudo xmpl –U</pre>
+		</div>
+	<p>After running the command with superuser privileges, an update confirmation request will be printed:</p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">This will update xmpl-tool to latest version! Are you sure? [Y/n]</pre>
+	</div>
+	<p>Once the request is confirmed and the tool is successfully updated, a confirmation message will be printed:<p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">xmpl-tool is updated to latest version (1.0.9)!</pre>
+	</div>
+</div>
+<div id="s_xmpl_uninstall" class="sectionTitle">1.3. Uninstalling Xmpl tool</div>
+
+
+	<div class="tekst odlomak documentation">
+	<div class="command">--uninstall -D</div>
+	<p>To uninstall Xmpl tool, use the option <i>--uninstall</i> or <i>-D</i> with superuser privileges.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> sudo xmpl –D</pre>
+		</div>
+	<p>After issuing the command, a confirmation message appears.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">This will remove xmpl-tool from your system. Are you sure? [Y/n]</pre>
+		</div>
+	<p>After confirming, you will be prompted to delete all installed local repositories.</p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">Do you want to remove all your local repositories? [Y/n]</pre>
+	</div>
+	<p>After confirmation, Xmpl tool and local repositories will be deleted from the local machine.<p>
+
+
+</div>
+<div  id="s_working_with_examples" class="mainTitle">2. Working with examples</div>
+
+
+<div class="odlomak">
+
+<div id="s_listing_packages" class="sectionTitle">2.1. Listing available packages</div>
+
+
+	<div class="tekst odlomak documentation">
+	<p>Simply run <i>xmpl</i> command without arguments to list all available packages in a repository.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl</pre>
+		</div>
+	<p>This will list all available packages in the selected repository, and the user will be able to choose one of the listed packages</p>
+	<div style="overflow-x: scroll;"><pre class="f9 b9 console">
+<span class="f6"><span class="bold">1 apt-cache</span></span>  <span class="f2">The apt-cache command can display much of the information stored in APT's internal database</span>
+<span class="f6"><span class="bold">2 apt-get</span></span>  <span class="f2">Command-line tool for handling packages on Debian based distributions</span>
+<span class="f6"><span class="bold">3 cal</span></span>  <span class="f2">The cal utility displays a simple calendar in traditional format</span>
+<span class="f6"><span class="bold">4 cd</span></span>  <span class="f2">The cd command is used to change the current directory</span>
+<span class="f6"><span class="bold">5 curl</span></span>  <span class="f2">Tool for transferring data from or to a server, using various protocols</span>
+<span class="f6"><span class="bold">6 date</span></span>  <span class="f2">Print or set the system date and time</span>
+<span class="f6"><span class="bold">7 dig</span></span>  <span class="f2">Dig (domain information groper) is a tool that is used for querying DNS servers for various DNS records, making it very useful for troubleshooting DNS problems.</span>
+<span class="f6"><span class="bold">8 dmesg</span></span>  <span class="f2">Command which will show Kernel messages contain valuable information about device drivers</span>
+<span class="f6"><span class="bold">9 du</span></span>  <span class="f2">Display disk usage statistics</span>
+<span class="f6"><span class="bold">10 echo</span></span>  <span class="f2">Display a line of text</span>
+<span class="f6"><span class="bold">11 eject</span></span>  <span class="f2">Eject  allows removable media (typically a CD-ROM, floppy disk, tape, or JAZ or ZIP disk) to be ejected under software control.</span>
+<span class="f6"><span class="bold">12 ffmpeg</span></span>  <span class="f2">FFmpeg is a free software project that produces libraries and programs for handling multimedia data.</span>
+<span class="f6"><span class="bold">13 ffplay</span></span>  <span class="f2">FFplay is a very simple and portable media player using the FFmpeg libraries and the SDL library. It is mostly used as a testbed for the various FFmpeg APIs.</span>
+<span class="f6"><span class="bold">14 find</span></span>  <span class="f2">Find command used to search and locate list of files and directories based on conditions you specify</span>
+<span class="f6"><span class="bold">15 hostname</span></span>  <span class="f2">This command can get or set the host name or the NIS domain name for local computer.</span>
+<span class="f6"><span class="bold">16 id</span></span>  <span class="f2">Display Complete User Information</span>
+<span class="f6"><span class="bold">17 ifconfig</span></span>  <span class="f2">Configure a network interface.</span>
+<span class="f6"><span class="bold">18 ip</span></span>  <span class="f2">Show / manipulate network routing, devices, policy routing and tunnels</span>
+<span class="f6"><span class="bold">19 last</span></span>  <span class="f2">Displays a list of all users logged in (and out) since /var/log/wtmp was created.</span>
+<span class="f6"><span class="bold">20 lshw</span></span>  <span class="f2">Small tool to extract detailed information on the hardware configuration of the machine</span>
+<span class="f6"><span class="bold">21 ls</span></span>  <span class="f2">List directory contents</span>
+<span class="f6"><span class="bold">22 man</span></span>  <span class="f2">system's manual pager, an interface to the on-line reference manuals</span>
+<span class="f6"><span class="bold">23 ngrep</span></span>  <span class="f2">Command line network packet analyzer</span>
+<span class="f6"><span class="bold">24 nmap</span></span>  <span class="f2">Network exploration tool and security / port scanner </span>
+<span class="f6"><span class="bold">25 openssl</span></span>  <span class="f2">Open source implementation of the SSL protocol.</span>
+<span class="f6"><span class="bold">26 pacman</span></span>  <span class="f2">Pacman is a package management utility that tracks installed packages on a Arch Linux distributions</span>
+<span class="f6"><span class="bold">27 ping</span></span>  <span class="f2">Ping is a computer network administration software utility used to test the reachability of a host on an network.</span>
+<span class="f6"><span class="bold">28 pwd</span></span>  <span class="f2">Print the full pathname of the current/working directory.</span>
+<span class="f6"><span class="bold">29 scp</span></span>  <span class="f2">Copies files between hosts on a network</span>
+<span class="f6"><span class="bold">30 sed</span></span>  <span class="f2">Stream editor for filtering and transforming text</span>
+<span class="f6"><span class="bold">31 tar</span></span>  <span class="f2">Tar is a computer software utility for collecting many files into one archive file</span>
+<span class="f6"><span class="bold">32 time</span></span>  <span class="f2">Run programs and summarize system resource usage</span>
+<span class="f6"><span class="bold">33 type</span></span>  <span class="f2">Describe a command, for each name, indicate how it would be interpreted if used as a command name.</span>
+<span class="f6"><span class="bold">34 uname</span></span>  <span class="f2">Prints the name, version and other details about the current machine and the operating system running on it. </span>
+<span class="f6"><span class="bold">35 uptime</span></span>  <span class="f2">Tell how long the system has been running.</span>
+<span class="f6"><span class="bold">36 wget</span></span>  <span class="f2">Free utility for non-interactive download of files from the Web</span>
+<span class="f6"><span class="bold">37 which</span></span>  <span class="f2">Returns the pathnames of the files (or links) which would be executed in the current environment</span>
+<span class="f6"><span class="bold">38 whoami</span></span>  <span class="f2">Print the user name associated with the current effective user ID</span>
+<span class="f6"><span class="bold">39 w</span></span>  <span class="f2">Displays information about the users currently on the machine, and their processes.</span>
+<span class="f6"><span class="bold">40 youtube-dl</span></span>  <span class="f2">Small command-line program to download videos from YouTube.com and a few more sites</span>
+<span class="f6"><span class="bold">41 zip</span></span>  <span class="f2">Package and compress files to *.zip archive</span>
+Please select package:
+</pre>
+
+	</div>
+	<p>To show available examples, the user has to select a package by name or by number.<p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">tar
+<span class="f6"><span class="bold">1</span></span> <span class="f2">Create a new bunzip compressed tar archive</span>
+<span class="f6"><span class="bold">2</span></span> <span class="f2">Create a new gunzip compressed tar archive</span>
+<span class="f6"><span class="bold">3</span></span> <span class="f2">Create a new tar archive</span>
+<span class="f6"><span class="bold">4</span></span> <span class="f2">Extract existing bunzip compressed tar archive</span>
+<span class="f6"><span class="bold">5</span></span> <span class="f2">Extract existing gunzip compressed tar archive</span>
+<span class="f6"><span class="bold">6</span></span> <span class="f2">Extract existing tar archive</span>
+<span class="f6"><span class="bold">7</span></span> <span class="f2">View an existing tar archive</span>
+Please select example number:
+</pre>
+	</div>
+	<p>At the end, if there is more than one example, the user will have to choose the number of the example which will finally be displayed.<p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">4
+<span class="f6"><span class="bold">tar: Extract existing bunzip compressed tar archive</span></span>
+<span class="f2"><span class="bold">tar xvfj {:archive name:}</span></span>
+</pre>
+	</div>
+
+
+
+</div>
+<div id="s_searching_examples" class="sectionTitle">2.2. Searching examples</div>
+
+<div class="tekst odlomak documentation">
+	<div class="command">[<i>query ...</i>] --search [<i>query ...</i>] -s [<i>query ...</i>]</div>
+	<p>Searching for examples is one of Xmpl tool’s main functionalities, so it is set as the default operation. </p>
+	<p>For fast searching through all examples, search terms should follow the Xmpl command:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl replace text</pre>
+		</div>
+	<p>If there is more than one example matching the searched terms, all found examples will be shown, and the user will have to choose an example to use and display.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="f6"><span class="bold">1 sed</span></span> <span class="f2">Replace specific word in text file and save changes to file</span>
+<span class="f6"><span class="bold">2 sed</span></span> <span class="f2">Replace specific word in text file</span>
+Please select example number:
+2
+<span class="f6"><span class="bold">sed: Replace specific word in text file</span></span>
+<span class="f2"><span class="bold">sed 's/{:search:}/{:replace:}/g' {:file:}</span></span></pre>
+		</div>
+	<p>The same thing can be done with the option <i>--search</i> or <i>–s</i>.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl replace text save
+<span class="f6"><span class="bold">sed: Replace specific word in text file and save changes to file</span></span>
+<span class="f2"><span class="bold">sed -i 's/{:search:}/{:replace:}/g' {:file:}</span></span>
+</pre>
+		</div>
+	<p>If there is only one result, it will directly be used and printed into the console.</p>
+	<p>When there are no results found, this message will be displayed:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">No results found!</pre>
+		</div>
+</div>
+
+<div id="s_filtering_packages" class="sectionTitle">2.3. Filtering by package name</div>
+<div class="tekst odlomak documentation">
+		<div class="command">--package [<i>package_name</i>] -p [<i>package_name</i>]</div>
+		<p>For filtering Xmpl examples by package name, use the <i>--package</i> or <i>-p</i> option followed by the name of the package for which you want to filter examples.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -p wget
+<span class="f6"><span class="bold">1</span></span> <span class="f2">Download a file from a webserver and save to hard drive</span>
+<span class="f6"><span class="bold">2</span></span> <span class="f2">Download entire website</span>
+<span class="f6"><span class="bold">3</span></span> <span class="f2">Download file into specific directory</span>
+Please select example number:
+1
+<span class="f6"><span class="bold">wget: Download a file from a webserver and save to hard drive</span></span>
+<span class="f2"><span class="bold">wget {:remote file:}</span></span>
+</pre>
+		</div>
+<p>If the filter is used in search, the search will only take place over the examples under the filtered package name.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">xmpl download file -p wget
+<span class="f6"><span class="bold">1</span></span> <span class="f2">Download a file from a webserver and save to hard drive</span>
+<span class="f6"><span class="bold">2</span></span> <span class="f2">Download file into specific directory</span>
+Please select example number:
+1
+<span class="f6"><span class="bold">wget: Download a file from a webserver and save to hard drive</span></span>
+<span class="f2"><span class="bold">wget {:remote file:}</span></span>
+</pre>
+		</div>
+</div>
+
+
+<div id="s_comments" class="sectionTitle">2.4. Comments in examples</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--comments -c</div>
+	<p>To turn on comments in Xmpl examples, use option <i>--comments</i> or <i>-c.</i></p>
+	<p>If comments exist in an Xmpl example content, they will be displayed when using and printing the final result.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl debian install new package -c
+<span class="f6"><span class="bold">apt-get: Install or upgrade specific packages on Debian based distributions</span></span>
+<span class="f2"><span class="bold">#may need root permissions
+apt-get install {::packages::}</span></span>
+</pre>
+		</div>
+</div>
+
+<div id="s_raw_examples" class="sectionTitle">2.5. Raw examples</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--raw -C</div>
+	<p>Raw mode allows you to view an example with its headers and print the entire content of the selected example file.</p>
+	<p>To display raw examples it is necessary to use <i>--raw</i> or <i>–C</i> option.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl debian install new package -C
+<span class="f6"><span class="bold">apt-get: Install or upgrade specific packages on Debian based distributions</span></span>
+<span class="f2"><span class="bold">#install or upgrade specific packages on debian based distributions
+#apt install new software version ubuntu mint package manager
+#may need root permissions
+apt-get install {::packages::}</span></span></pre>
+		</div>
+</div>
+
+<div id="s_online_mode" class="sectionTitle">2.6. Online mode</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--online -o</div>
+	<p>With the <i>--online</i> or <i>–o</i> option, Xmpl tool is forced to use examples from the GitHub repository instead of using local examples.</p>
+	<p>This option can only be used on the source repository.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -o
+<span class="f3">Online mode!</span>
+<span class="f6"><span class="bold">1 apt-cache  
+2 apt-get  
+3 cal  
+4 cd  
+5 curl  
+6 date  
+7 dig  
+8 dmesg  
+9 du  
+10 echo  
+11 eject  
+12 ffmpeg  
+13 ffplay  
+14 find  
+15 hostname  
+16 id  
+17 ifconfig  
+18 ip  
+19 last  
+20 lshw  
+21 ls  
+22 man  
+23 openssl  
+24 pacman  
+25 ping  
+26 pwd  
+27 scp  
+28 sed  
+29 tar  
+30 time</span></span>  
+Please select package:
+3
+<span class="f6"><span class="bold">cal: Show this month calendar</span></span>
+<span class="f2"><span class="bold">cal</span></span></pre>
+		</div>
+
+<p>Fetching the package descriptions from the GitHub repository takes some time, so in this mode this option is disabled by default.</p>
+
+<p>As this option is default for non-installed usage, it is not available while running in this mode.</p>
+
+</div>
+
+<div id="s_full_online_mode" class="sectionTitle">2.7. Online mode with descriptions</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--full-online -O</div>
+	<p>Online mode with descriptions forces Xmpl tool to use examples from the GitHub repository, and includes package descriptions when <i>Listing all packages (2.1).</i></p>
+	<p>This option can be used on any source repository, and it can be activated by using <i>--full-online</i> or <i>-O</i> option.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -O
+<span class="f3">Online mode!</span>
+<span class="f6"><span class="bold">1 apt-cache</span></span>  <span class="f2">The apt-cache command can display much of the information stored in APT's internal database</span>
+<span class="f6"><span class="bold">2 apt-get</span></span>  <span class="f2">Command-line tool for handling packages on Debian based distributions</span>
+<span class="f6"><span class="bold">3 cal</span></span>  <span class="f2">The cal utility displays a simple calendar in traditional format</span>
+<span class="f6"><span class="bold">4 cd</span></span>  <span class="f2">The cd command is used to change the current directory</span>
+<span class="f6"><span class="bold">5 curl</span></span>  <span class="f2">Tool for transferring data from or to a server, using various protocols</span>
+<span class="f6"><span class="bold">6 date</span></span>  <span class="f2">Print or set the system date and time</span>
+<span class="f6"><span class="bold">7 dig</span></span>  <span class="f2">Dig (domain information groper) is a tool that is used for querying DNS servers for various DNS records, making it very useful for troubleshooting DNS problems.</span>
+<span class="f6"><span class="bold">8 dmesg</span></span>  <span class="f2">Command which will show Kernel messages contain valuable information about device drivers</span>
+<span class="f6"><span class="bold">9 du</span></span>  <span class="f2">Display disk usage statistics</span>
+<span class="f6"><span class="bold">10 echo</span></span>  <span class="f2">Display a line of text</span>
+<span class="f6"><span class="bold">11 eject</span></span>  <span class="f2">Eject  allows removable media (typically a CD-ROM, floppy disk, tape, or JAZ or ZIP disk) to be ejected under software control.</span>
+<span class="f6"><span class="bold">12 ffmpeg</span></span>  <span class="f2">FFmpeg is a free software project that produces libraries and programs for handling multimedia data.</span>
+<span class="f6"><span class="bold">13 ffplay</span></span>  <span class="f2">FFplay is a very simple and portable media player using the FFmpeg libraries and the SDL library. It is mostly used as a testbed for the various FFmpeg APIs.</span>
+<span class="f6"><span class="bold">14 find</span></span>  <span class="f2">Find command used to search and locate list of files and directories based on conditions you specify</span>
+<span class="f6"><span class="bold">15 hostname</span></span>  <span class="f2">This command can get or set the host name or the NIS domain name for local computer.</span>
+<span class="f6"><span class="bold">16 id</span></span>  <span class="f2">Display Complete User Information</span>
+<span class="f6"><span class="bold">17 ifconfig</span></span>  <span class="f2">Configure a network interface.</span>
+<span class="f6"><span class="bold">18 ip</span></span>  <span class="f2">Show / manipulate network routing, devices, policy routing and tunnels</span>
+<span class="f6"><span class="bold">19 last</span></span>  <span class="f2">Displays a list of all users logged in (and out) since /var/log/wtmp was created.</span>
+<span class="f6"><span class="bold">20 lshw</span></span>  <span class="f2">Small tool to extract detailed information on the hardware configuration of the machine</span>
+<span class="f6"><span class="bold">21 ls</span></span>  <span class="f2">List directory contents</span>
+<span class="f6"><span class="bold">22 man</span></span>  <span class="f2">system's manual pager, an interface to the on-line reference manuals</span>
+<span class="f6"><span class="bold">23 openssl</span></span>  <span class="f2">Open source implementation of the SSL protocol.</span>
+<span class="f6"><span class="bold">24 pacman</span></span>  <span class="f2">Pacman is a package management utility that tracks installed packages on a Arch Linux distributions</span>
+<span class="f6"><span class="bold">25 ping</span></span>  <span class="f2">Ping is a computer network administration software utility used to test the reachability of a host on an network.</span>
+<span class="f6"><span class="bold">26 pwd</span></span>  <span class="f2">Print the full pathname of the current/working directory.</span>
+<span class="f6"><span class="bold">27 scp</span></span>  <span class="f2">Copies files between hosts on a network</span>
+<span class="f6"><span class="bold">28 sed</span></span>  <span class="f2">Stream editor for filtering and transforming text</span>
+<span class="f6"><span class="bold">29 tar</span></span>  <span class="f2">Tar is a computer software utility for collecting many files into one archive file</span>
+<span class="f6"><span class="bold">30 time</span></span>  <span class="f2">Run programs and summarize system resource usage</span>
+
+Please select package:
+date
+<span class="f6"><span class="bold">date: Show current system date and time</span></span>
+<span class="f2"><span class="bold">date</span></span></pre>
+		</div>
+</div>
+
+<div id="s_input_mode" class="sectionTitle">2.8. User input mode</div>
+<div class="tekst odlomak documentation">
+		<div class="command">--input [<i>arguments ...</i>] -i [<i>arguments ...</i>]</div>
+		<p>By running Xmpl tool with the <i>--input</i> or <i>-i</i> option, the user will be prompted to interactively enter custom values, if the example contains appropriate input variables.</p>
+		<p><b>Example:</b> Ping host with input option</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping host -i</pre>
+		</div>
+
+		<p>In this example, there is only one result for the terms ping and host.</p>
+		<p>After executing this command, the user will be prompted to enter the variable remote host.</p>
+		<p>In this example we will enter <i>github.com</i> as the value for that variable, and the final result will be a complete command with the forwarded variable values:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+github.com
+<span class="f2"><span class="bold">ping github.com -c 4</span></span></pre>
+		</div>
+		<p>If the same command is invoked, Xmpl tool will automatically suggest the last used entries for this selection.</p>
+		<p>The same can be achieved by forwarding the variable values directly after the option <i>--input</i> or <i>-i</i>, where the values for all variables should be set. Values for different variable input are separated with a whitespace character.</p>
+		<p>In this example, the entry <i>www.github.com</i> will be set as the value for the input variable remote host:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping host -i www.github.com
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+www.github.com
+<span class="f2"><span class="bold">ping www.github.com -c 4</span></span></pre>
+		</div>
+		<p><b>Outputs streams in the user input mode:</b></p>
+		<p>The tool uses the <i>stdErr</i> and <i>stdOut</i> output streams. All messages except the final result are printed on
+		the <i>stdErr</i> stream. Only the final result which the Xmpl tool actually returns, goes to the <i>stdOut</i> stream.</p>
+		<p>This makes it possible to retrieve the prepared result only, and to redirect it to a local file.</p>
+		<p><b>Example:</b> Redirecting result to a file named <i>local.file</i></p>
+
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping -i > local.file
+<span class="f6"><span class="bold">1 nmap</span></span> <span class="f2">Ping scans the network, listing machines that respond to ping</span>
+<span class="f6"><span class="bold">2 ping</span></span> <span class="f2">Flood ping</span>
+<span class="f6"><span class="bold">3 ping</span></span> <span class="f2">Test the reachability of a host on network</span>
+Please select example number:
+3
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+www.github.com</pre>
+		</div>
+		<p>The final result is not listed in the console, but was added to the file <i>local.file</i>. This can be checked by printing the file with cat command:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> cat local.file
+ping www.github.com -c 4</pre>
+		</div>
+
+<p>In user input mode the last whitespace is remove if present in the entry. This is the result of the Bash
+implementation of the autocomplete function. After selecting a location or file with autocomplete, the
+whitespace remains at the end of the entry. Therefore, if the user deliberately wishes to pass the
+whitespace at the end, the entry must be entered in quotation marks: &quot;entry &quot; or &#39;entry &#39;</p>
+</div>
+
+<div id="s_execute_mode" class="sectionTitle">2.9. Execute mode</div>
+<div class="tekst odlomak documentation">
+		<div class="command">--execute [<i>arguments ...</i>] -x [<i>arguments ...</i>]</div>
+		<p>Use the <i>--execute</i> or <i>-x</i> option to execute examples.</p>
+		<p><b>Example:</b> Executing <i>ping host</i> example</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping host -x
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span></pre>
+		</div>
+		<p>By using the <i>--execute</i> or <i>-x</i> options, as well as in <i>user input mode (2.8)</i>, the tool will prompt for the
+value of the &quot;<i>remote host</i>&quot; variable. After entering the address or hostname of the remote computer,
+selected command with the forwarded arguments will be executed:</p>
+
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">github.com
+<span class="f2"><span class="bold">ping github.com -c 4</span></span>
+PING github.com (140.82.118.3) 56(84) bytes of data.
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=1 ttl=52 time=50.5 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=2 ttl=52 time=277 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=3 ttl=52 time=95.2 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=4 ttl=52 time=220 ms
+
+--- github.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 50.563/160.816/277.117/91.548 ms
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p>In <i>user input mode (2.8.)</i>, it is possible to forward arguments with which we want to execute the
+selected example. This can be done by typing values directly after the option <i>--execute</i> or <i>-x</i>, or when
+the user is being prompted to enter the variable values.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping host -x www.github.com
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+www.github.com
+<span class="f2"><span class="bold">ping www.github.com -c 4</span></span>
+PING github.com (140.82.118.3) 56(84) bytes of data.
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=1 ttl=52 time=55.5 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=2 ttl=52 time=180 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=3 ttl=52 time=202 ms
+64 bytes from lb-140-82-118-3-ams.github.com (140.82.118.3): icmp_seq=4 ttl=52 time=226 ms
+
+--- www.github.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 55.538/166.233/226.084/65.924 ms
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p><b>Outputs streams in the execute mode:</b></p>
+
+<p>When executing an example, the Xmpl tool will return the output of the executed command as the
+final result. The result could be forwarded to the next command with the pipe <i>(|)</i> symbol or stored in a
+local file.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl list hardware -x | grep SATA
+<span class="f6"><span class="bold">lshw: List all hardware on machine</span></span>
+<span class="f2"><span class="bold">lshw</span></span>
+WARNING: you should run this program as super-user.
+                description: <span class="f1"><span class="bold">SATA</span></span> controller
+                product: 88SE9172 <span class="f1"><span class="bold">SATA</span></span> 6Gb/s Controller
+             description: <span class="f1"><span class="bold">SATA</span></span> controller
+             product: 7 Series/C210 Series Chipset Family 6-port <span class="f1"><span class="bold">SATA</span></span> Controller [AHCI mode]
+WARNING: output may be incomplete or inaccurate, you should run this program as super-user.
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p>The output of the <i>lshw</i> command is passed to the <i>grep</i> command that prints only lines that mention the word <i>SATA</i>.</p>
+<p>Output can also be written to a file:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ip addresses -x > test.file
+<span class="f6"><span class="bold">ip: Display all network interfaces and ip addresses</span></span>
+<span class="f2"><span class="bold">ip addr show</span></span>
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p>The final result is not printed on the console but redirected to the file <i>test.file</i>, which can be checked
+by printing the file with the <i>cat</i> command:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> cat test.file
+1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp6s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc pfifo_fast state DOWN group default qlen 1000
+    link/ether 90:2b:34:5a:d0:91 brd ff:ff:ff:ff:ff:ff
+14: enp0s29u1u6: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+    link/ether 52:88:a0:9a:3c:f6 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.42.17/24 brd 192.168.42.255 scope global dynamic enp0s29u1u6
+       valid_lft 3531sec preferred_lft 3531sec
+    inet6 fe80::c43f:e384:d49d:d475/64 scope link 
+       valid_lft forever preferred_lft forever
+</pre>
+		</div>
+<p>In addition to outputting the executed command to the <i>stdOut</i> output stream, the alternative output
+stream <i>stdOut2</i> prints the exact commands that are executed.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl ping host -x www.github.io 3> alternate.out
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+www.github.io
+<span class="f2"><span class="bold">ping www.github.io -c 4</span></span>
+PING www.github.io (185.199.109.153) 56(84) bytes of data.
+64 bytes from 185.199.109.153: icmp_seq=1 ttl=54 time=205 ms
+64 bytes from 185.199.109.153: icmp_seq=2 ttl=54 time=46.2 ms
+64 bytes from 185.199.109.153: icmp_seq=3 ttl=54 time=46.2 ms
+64 bytes from 185.199.109.153: icmp_seq=4 ttl=54 time=46.0 ms
+
+--- www.github.io ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 46.026/85.909/205.142/68.839 ms
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p>The result can be checked with the <i>cat</i> command:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> cat alternate.out
+ping www.github.io -c 4</pre>
+		</div>
+
+<p><i>Execute mode (2.9.)</i> is prioritized over <i>user input mode (2.8.)</i>. If both are invoked simultaneously,
+the tool will use <i>execute mode (2.9.)</i>.</p>
+</div>
+
+
+<div id="s_last_example" class="sectionTitle">2.10. Last used example</div>
+<div class="tekst odlomak documentation">
+		<div class="command">--last -l</div>
+		<p>If the tool is properly installed and used as a sourced script, it is possible to retrieve and view the last used example by using the <i>--last</i> or <i>-l</i> option.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -l
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f2"><span class="bold">ping {:remote host:} -c 4</span></span></pre>
+		</div>
+<p>This option is available in the same shell session if the tool is fully installed.</p>
+</div>
+
+<div id="s_execute_last" class="sectionTitle">2.11. Executing last used example</div>
+<div class="tekst odlomak documentation">
+		<div class="command">--execute-last [<i>arguments ...</i>] -X [<i>arguments ...</i>]</div>
+		<p>To execute the last fetched command, use the <i>--execute-last</i> or <i>-X</i> option. This option behaves like <i>execute mode (2.9)</i>, but executes only the last used example.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -X
+<span class="f6"><span class="bold">ping: Test the reachability of a host on network</span></span>
+<span class="f3"><span class="bold">ping {:remote host:} -c 4</span></span>
+<span class="f6">remote host:</span>
+1.1.1.1
+<span class="f2"><span class="bold">ping 1.1.1.1 -c 4</span></span>
+PING 1.1.1.1 (1.1.1.1) 56(84) bytes of data.
+64 bytes from 1.1.1.1: icmp_seq=1 ttl=58 time=21.8 ms
+64 bytes from 1.1.1.1: icmp_seq=2 ttl=58 time=29.9 ms
+64 bytes from 1.1.1.1: icmp_seq=3 ttl=58 time=25.8 ms
+64 bytes from 1.1.1.1: icmp_seq=4 ttl=58 time=29.0 ms
+
+--- 1.1.1.1 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3003ms
+rtt min/avg/max/mdev = 21.859/26.674/29.989/3.182 ms
+<span class="f5">EXECUTED</span></pre>
+		</div>
+<p>Like in example <i>execution mode (2.9)</i>, it is possible to forward the parameters after the options <i>--execute-last</i> or <i>-X</i>.
+It is also possible to input these values later through the Xmpl tool when executing the examples.</p>
+<p><i>Execute mode (2.9.)</i> is prioritized over <i>user input mode (2.8.)</i>. If both are invoked simultaneously, the tool will use <i>execute mode (2.9.)</i>.</p>
+</div>
+
+</div>
+
+<div  id="s_working_with_repositories" class="mainTitle">3. Working with repositories</div>
+
+
+<div class="odlomak">
+
+<div id="s_adding_repository" class="sectionTitle">3.1. Adding a new repository</div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_adding_private_repo" class="sectionTitle">3.1.1. Adding private Xmpl repository</div>
+<div class="box">
+	<div class="tekst odlomak documentation">
+		<div class="command">--new-repo -n</div>
+		<p>Editing and adding new examples is only possible through private repositories. To add a private repository you will have to run the tool with the option <i>--new-repo</i> or <i>–n</i>.</p>
+		<p>A GitHub account is necessary for this procedure.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -n</pre>
+		</div>
+	<p>After starting the command, the tool will prompt the user to enter their GitHub username and immediately request a local pseudonym entry for a new local repository. If there is no Xmpl repository
+on the user&#39;s GitHub profile, it will be forked from the main Xmpl repository and then downloaded to the local machine.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="f3">New repository from GitHub source 'xmpl-tool/xmpl-repo'</span>
+Enter GitHub username:
+xmpltest
+Enter local repository alias:
+dev</pre>
+		</div>
+		<p>If a user doesn&#39;t have a private copy of the Xmpl main repository on their GitHub account, the Xmpl tool will ask them to authorize forking the <i>xmpl-main</i> repository.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">Enter host password for user 'xmpltest': ********</pre>
+		</div>
+		<p>After the user is authorized with their GitHub password, the Xmpl tool will fork and download the repository from their GitHub profile, which can then be edited and supplemented with new examples.</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="f3">Creating fork of main repository...</span>
+<span class="f3">Done!</span>
+Cloning into '/home/user/.xmpl/repos/xmpltest/xmpl-repo'...
+remote: Enumerating objects: 937, done.
+remote: Total 937 (delta 0), reused 0 (delta 0), pack-reused 937
+Receiving objects: 100% (937/937), 144.19 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (349/349), done.
+Checking connectivity... done.
+</pre>
+		</div>
+		<p>A user who has already forked the Xmpl main repository on their GitHub account, doesn’t need to authorize the same fork again, so the Xmpl tool will automatically download the copy of the repository to the local machine.</p>
+	</div>
+</div></div>
+
+<div id="s_custom_repo" class="alignLeft itemData odlomak"><div class="sectionTitle">3.1.2. Adding a custom repository</div>
+<div class="box">
+	<div class="documentation tekst odlomak">
+	<div id="s_preparing_custom_repo" class="sectionTitle2">3.1.2.1. Preparing a new custom repository for Xmpl</div>
+	<div class="odlomak">
+		<p>To add a new custom repository, first create a new repository on your GitHub account as described on the GitHub site:</p>
+		<p><a href="https://help.github.com/en/articles/creating-a-new-repository" target="_blank" />https://help.github.com/en/articles/creating-a-new-repository</a></p>
+		<p>After the repository has been created, you will have to create the <i>commands.repo</i> file in the repository with the arbitrary content. This file is necessary for using the repository with Xmpl tool.</p>
+
+		<p>Example of <i>commands.repo</i> file:</p>
+		<div class="config">Custom xmpl repository</div>
+		<br>
+		
+
+	</div>
+
+	<div id="s_adding_custom_repo" class="sectionTitle2">3.1.2.2. Adding a custom repository in Xmpl tool</div>
+	<div class="odlomak">
+		<div class="command">--new-repo <i>github_username/github_repo</i> -n <i>github_username/github_repo</i></div>
+		<p>A custom repository can be added with the <i>--new-repo</i> or <i>–n</i> option, after which the GitHub username and the existing repository name must be entered in the following format:</p>
+		<div class="config">github_username/repository_name</div>
+		<p><b>Example:</b> Adding a custom <i>xmpl-custom</i> repository from the GitHub user <i>xmpltest</i></p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -n xmpltest/custom-xmpl
+<span class="f3">New repository from GitHub source 'xmpltest/custom-xmpl'</span>
+Enter GitHub username:
+xmpltest
+Enter local repository alias:
+custom
+Cloning into '/home/user/.xmpl/repos/xmpltest/custom-xmpl'...
+remote: Enumerating objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 3
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+</pre>
+		</div>
+		<p>The Xmpl tool expects a prepared repository. If the repository is not properly prepared this error message will be displayed:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">Not valid Xmpl repository!</pre>
+		</div>
+		<p>Or if the repository does not exist:</p>
+		<div style="overflow-x: scroll;">
+			<pre class="f9 b9 console">GitHub repository does not exist!</pre>
+		</div>
+	</div>
+</div></div>
+</div>
+
+
+<div id="s_changing_repo" class="sectionTitle">3.2. Changing repository</div>
+
+
+<div class="alignLeft itemData odlomak">
+<div id="s_quick_change_repo" class="sectionTitle">3.2.1. Quick change repository</div>
+<div class="box">
+	<div class="tekst odlomak documentation">
+	<div class="command">--repo [<i>repo_alias</i>] -r [<i>repo_alias</i>]</div>
+	<p>The quick-change repository option is designed for working with multiple repositories at the same machine.</p>
+	<p>With the <i>--repo</i> or <i>-r</i> option, it is possible to check or change the current working repository:<p>
+	<div style="overflow-x: scroll;"><pre class="f9 b9 console"><span class="bold">$:</span> xmpl -r
+<span class="f3">Using 'main' repository!</span>
+<span class="f6"><span class="bold">1 apt-cache</span></span>  <span class="f2">The apt-cache command can display much of the information stored in APT's internal database</span>
+<span class="f6"><span class="bold">2 apt-get</span></span>  <span class="f2">Command-line tool for handling packages on Debian based distributions</span>
+<span class="f6"><span class="bold">3 cal</span></span>  <span class="f2">The cal utility displays a simple calendar in traditional format</span>
+...
+</pre>
+	</div>
+	<p>If the correct local repository pseudonym is forwarded after the <i>--repo</i> or <i>-r</i> option, Xmpl tool will use the given repository for that request.</p>
+	<div style="overflow-x: scroll;"><pre class="f9 b9 console"><span class="bold">$:</span> xmpl -r dev
+<span class="f3">Using 'dev' repository!</span>
+<span class="f6"><span class="bold">1 apt-cache</span></span>  <span class="f2">The apt-cache command can display much of the information stored in APT's internal database</span>
+<span class="f6"><span class="bold">2 apt-get</span></span>  <span class="f2">Command-line tool for handling packages on Debian based distributions</span>
+<span class="f6"><span class="bold">3 cal</span></span>  <span class="f2">The cal utility displays a simple calendar in traditional format</span>
+...
+</pre>
+	</div>
+
+
+	</div>
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_setting_default_repo" class="sectionTitle">3.2.2. Setting default repository</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<div class="command">--store-repo [<i>repo_alias</i>] -R [<i>repo_alias</i>]</div>
+	<p>For a permanent change of repositories use the option <i>--store-repo</i> or <i>-R</i>.</p>
+	<p>If the Xmpl tool is invoked with this option, the default repository will be printed along with a list of all locally available repositories with their pseudonyms.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -R
+<span class="f3">Current repository: main (xmpl-tool/xmpl-repo)</span>
+<span class="f2">main=xmpl-tool/xmpl-repo
+dev=xmpltest/xmpl-repo
+custom=xmpltest/custom-xmpl</span></pre>
+	</div>
+	<p>If a locally installed pseudonym is forwarded after the <i>--store-repo</i> or <i>-R</i> option, the Xmpl tool will set the given repository as the new default repository.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -R custom
+<span class="f3">Using repository: custom (xmpltest/custom-xmpl)</span></pre>
+	</div>
+	<p>After changing the default repository, all requests for which the repository is not specified, will be processed in a newly set repository.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl
+<span class="f3">Empty repository!</span></pre>
+	</div>
+	<p>As the custom repository is currently empty, the message <i>“Empty repository!”</i> is printed on the console.</p>
+</div>
+
+</div></div>
+
+<div id="s_working_with_local_examples" class="sectionTitle">3.3. Working with examples in a local repository</div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_editing_examples" class="sectionTitle">3.3.1. Editing examples</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<div class="command">--edit [<i>package_name</i>] -e [<i>package_name</i>]</div>
+	<p>Adding and editing new packages and examples can be done directly through the Xmpl tool on all private repositories, using the <i>--edit</i> or <i>-e</i> option.</p>
+	<p>While entering this option, you can instantly write the name of the package for which you want to add or edit an example. If the package name is not forwarded, the Xmpl tool will prompt the user to enter a
+package name for editing.</p>
+	<p>After the package is entered, the Xmpl tool will check if the package already exists in the repository. If the package does not exist, Xmpl tool will prompt the user to enter the new package description:</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -e
+Enter package name:
+echo
+Create new package 'echo'? [Y/n]
+y
+Please enter description for package 'echo':</pre>
+	</div>
+	<p>The packet description is displayed next to the package name while the Xmpl tool is printing the packages and examples available for use.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console">
+Display a line of text
+Is this description correct? [y/N]
+y</pre>
+	</div>
+	<p>Since this is a first example for the package <i>echo</i>, the procedure for adding a new example will be initiated and the user will be asked to enter the title of the new example:</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console">Enter example title:
+Print current working directory
+Is this title correct? [y/N]
+y</pre>
+	</div>
+	<p>After entering the required data, the tool will ask for the content. The syntax of the example should be entered keeping the variable structure (<i>{:single variable:}</i> or <i>{::variables list::}</i>) in mind, placing the
+variables in adequate positions in the command syntax.</p>
+
+	<ul>
+	  <li><span class="config">{:single variable:}</span>- variable content is literal (used for filenames, paths, …)</li>
+	  <li><span class="config">{::variables list::}</span>- variable content is delimited by space (used for listing parameters, multiple variables...)</li>
+	</ul>
+
+
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="f3">Edit example 'Print current working directory'</span>
+Enter command with input variable structure {:normal input:} or {::list input::}
+echo $PWD
+Is this command correct? [y/N]
+y</pre>
+	</div>
+	<p>After entering the example, the tool will ask for related search terms which are used to find the example with the search system.</p>
+	<p>Both the title and the contents of the example are indexed for searching, meaning that the search tags are used to broaden this scope. There is no need to repeat title or content terms.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console">Edit search tags:
+pwd dir show display print folder my location variable this
+Is this correct? [y/N]
+y</pre>
+	</div>
+	<p>After the final confirmation, the example will be stored in the default local repository and printed on the screen.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="f3">Example 'Print current working directory' successfully modified!</span>
+<span class="f2">
+#print current working directory
+#pwd dir show display print folder my location variable this
+echo $PWD</span>
+</pre>
+	</div>
+	<p>If a package exists, Xmpl tool will provide a list of examples that can be edited, as well as the option to add a new example into the repository.</p>
+	<p>You can add a new example by selecting the option <i>0 NEW</i>, or edit an existing example by selecting its number from the provided example list.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -e echo
+<span class="f6"><span class="bold">0</span></span>  <span class="f2">NEW</span>
+<span class="f6"><span class="bold">1</span></span>  <span class="f2">Print current working directory</span>
+Please select example number:
+0
+Enter example title:
+Print my message on screen
+Is this title correct? [y/N]
+y
+<span class="f3">Edit example 'Print my message on screen'</span>
+Enter command with input variable structure {:normal input:} or {::list input::}
+echo {:message:}
+Is this command correct? [y/N]
+y
+Edit search tags:
+write line of text
+Is this correct? [y/N]
+y
+<span class="f3">Example 'Print my message on screen' successfully modified!</span>
+<span class="f2">
+#print my message on screen
+#write line of text
+echo {:message:}
+</span></pre>
+	</div>
+	<p>The procedure for both editing an existing example or adding a new one is similar. The only difference is that existing content will be pre-filled.</p>
+	<p>If an example that contains multiple lines of code is edited, the Xmpl tool will <i>edit an example in the default text editor (3.3.2.)</i>.</p>
+</div>
+
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_editing_with_editor" class="sectionTitle">3.3.2. Editing examples with the default text editor</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<div class="command">--editor [<i>package_name</i>] -E [<i>package_name</i>]</div>
+	<p>To add examples that contain multiple lines of code, use the <i>--editor</i> or <i>-E</i> option. It behaves in the same way as the option to edit the examples, except that a default text editor is always used for editing
+an examples command.</p>
+	<p><b>Example:</b> Adding own scripts to a custom repository</p>
+	<p>To demonstrate this example, we will first set <i>xmpltest/custom-xmpl</i> as the default repository for the Xmpl tool:</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -R custom
+<span class="f3">Using repository: custom (xmpltest/custom-xmpl)</span>
+</pre>
+	</div>
+	<p>In a custom repository, we&#39;ll add a new package called <i>TEST</i>:</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -E TEST
+Create new package 'TEST'? [Y/n]
+y
+Please enter description for package 'TEST':
+my custom multiline script
+Is this description correct? [y/N]
+y
+Enter example title:
+change shell foreground color
+Is this title correct? [y/N]
+y
+<span class="f3">Edit example 'change shell foreground color'</span>
+Enter command with input variable structure {:normal input:} or {::list input::}
+This will open multiline editor! OK?</pre>
+	</div>
+	<p>After confirming the message, the default text editor will open, in this case <i>nano</i>:</p>
+
+	<img style="border:1px solid black; object-fit: cover; width:100%;" src="./images/multiline_edit.png"></img>
+	<p>When the example is finally stored and the editor closed, editing will be continued.</p>
+
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console">input_color={:red|green|yellow|blue:}
+case $input_color in
+	red ) echo -e "\e[31mRed"
+		PS1=$PS1"\e[31m"
+		;;
+	green ) echo -e "\e[32mGreen"
+		PS1=$PS1"\e[32m"
+		;;
+	yellow ) echo -e "\e[33mYellow"
+		PS1=$PS1"\e[33m"
+		;;
+	blue ) echo -e "\e[34mBlue"
+		PS1=$PS1"\e[34m"
+		;;
+	* ) echo -e "\e[39m"
+		PS1=$PS1"\e[39m"
+		;;
+esac
+Is this command correct? [y/N]
+y
+Edit search tags:
+bash terminal console font
+Is this correct? [y/N]
+y
+<span class="f3">Example 'change shell foreground color' successfully modified!</span>
+<span class="f2">
+#change shell foreground color
+#bash terminal console font
+input_color={:red|green|yellow|blue:}
+case $input_color in
+	red ) echo -e "\e[31mRed"
+		PS1=$PS1"\e[31m"
+		;;
+	green ) echo -e "\e[32mGreen"
+		PS1=$PS1"\e[32m"
+		;;
+	yellow ) echo -e "\e[33mYellow"
+		PS1=$PS1"\e[33m"
+		;;
+	blue ) echo -e "\e[34mBlue"
+		PS1=$PS1"\e[34m"
+		;;
+	* ) echo -e "\e[39m"
+		PS1=$PS1"\e[39m"
+		;;
+esac</span>
+</pre>
+	</div>
+	<p>If there is no default text editor on the system, the Xmpl tool will ask the user to enter a new default text editor (<i>vi</i>, <i>nano</i>, ...).</p>
+	<p>The default text editor can manually be defined in the <i>~/.xmpl/xmpl.conf</i> file using the <i>XMPL_DEFAULT_EDITOR</i> variable.</p>
+
+</div>
+
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_deleting_examples" class="sectionTitle">3.3.3. Deleting examples or packages</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<div class="command">--delete <i>package_name</i> -d <i>package_name</i></div>
+	<p>To delete an existing example or package use the option <i>--delete</i> or <i>–d</i>. When this option is used, it is necessary to input the name of the package that you wish to delete.</p>
+	<p>In case there is at least one example, the Xmpl tool will print out all available examples for the selected package, and prompt the user to select the example they want to delete.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -d TEST
+Select the example you want to delete!
+<span class="f6"><span class="bold">1</span></span>  <span class="f2">change shell foreground color</span>
+Please select example number:</pre>
+	</div>
+	<p>After selecting an example, the example content is printed once more and the user is prompted for confirmation.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console">1
+<span class="f2">#change shell foreground color
+#bash terminal console font
+input_color={:red|green|yellow|blue:}
+case $input_color in
+	red ) echo -e "\e[31mRed"
+		PS1=$PS1"\e[31m"
+		;;
+	green ) echo -e "\e[32mGreen"
+		PS1=$PS1"\e[32m"
+		;;
+	yellow ) echo -e "\e[33mYellow"
+		PS1=$PS1"\e[33m"
+		;;
+	blue ) echo -e "\e[34mBlue"
+		PS1=$PS1"\e[34m"
+		;;
+	* ) echo -e "\e[39m"
+		PS1=$PS1"\e[39m"
+		;;
+esac</span>
+Delete example 'change shell foreground color'? [y/N]
+y
+Example 'change shell foreground color' successfully deleted!</pre>
+	</div>
+	<p>If there is no example with the stated package, the user will be prompted to delete the package from the repository.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -d TEST
+No examples for package 'TEST'!
+Delete this package? [y/N]
+y
+Package 'TEST' successfully deleted!
+</pre>
+	</div>
+
+</div>
+
+</div></div>
+
+<div id="s_synchronizing_repos" class="sectionTitle">3.4. Synchronizing local and remote repositories</div>
+
+<div class="tekst odlomak documentation">
+	<div class="command">--sync-repo [<i>repo_alias</i>] -S [<i>repo_alias</i>]</div>
+	<p>Synchronization between local and GitHub repositories is also automated by using the <i>--sync-repo</i> or <i>-S</i> option.</p>
+	<p>If a local pseudonym is not forwarded after the <i>--sync-repo</i> option, the default repository will be used for synchronization.</p>
+
+
+<div id="s_synchronizing_main_repo" class="sectionTitle">3.4.1. Synchronizing Xmpl main repository</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<p>It isn’t possible to directly edit any repositories located under the GitHub organization <i>xmpl-tool</i>. Only approved modifications and newly added examples are enabled for retrieval in such repositories.</p>
+	<p>In this case, the synchronization of the repository is one-way. (<i>remote main&gt;&gt; local main</i>)</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl –S main
+Fetching origin
+6 file/s changed!
+commands/apt/Automatically clean apt cache on Debian based distributions.xmpl
+commands/apt/Automatically clean apt cache.xmpl
+commands/apt/Completely remove packages with configuration on Debian based distributions.xmpl
+commands/apt/Completely remove packages with configuration.xmpl
+commands/apt/Delete downloaded .deb packages from the local repository on Debian based distibutions.xmpl
+commands/apt/Delete downloaded .deb packages from the local repository.xmpl
+Do you want to synchronize 'main' repository? [Y/n]
+Y
+Updating 2fe9048..e93898f
+Fast-forward
+commands/apt/Automatically clean apt cache on Debian based distributions.xmpl
+| 4 ++++
+commands/apt/Automatically clean apt cache.xmpl
+| 3 ---
+commands/apt/Completely remove packages with configuration on Debian based distributions.xmpl
+| 4 ++++
+commands/apt/Completely remove packages with configuration.xmpl
+| 3 ---
+commands/apt/Delete downloaded .deb packages from the local repository on Debian based distibutions.xmpl
+| 4 ++++
+commands/apt/Delete downloaded .deb packages from the local repository.xmpl
+| 3 ---
+6 files changed, 12 insertions(+), 9 deletions(-)
+create mode 100644 commands/apt/Automatically clean apt cache on Debian based distributions.xmpl
+delete mode 100644 commands/apt/Automatically clean apt cache.xmpl
+create mode 100644 commands/apt/Completely remove packages with configuration on Debian based distributions.xmpl
+delete mode 100644 commands/apt/Completely remove packages with configuration.xmpl
+create mode 100644 commands/apt/Delete downloaded .deb packages from the local repository on Debian based distibutions.xmpl
+delete mode 100644 commands/apt/Delete downloaded .deb packages from the local repository.xmpl</pre>
+	</div>
+	<p>Synchronization of the main repository is automated to run every day after the user forwards a request to the repository for the first time.</p>
+
+</div></div>
+
+
+
+
+<div id="s_synchronizing_private_repo" class="sectionTitle">3.4.2. Synchronizing Xmpl private repository</div>
+<div class="box">
+<div class="tekst odlomak documentation">
+	<p>When synchronizing private repositories, all approved examples from the source repository will be downloaded while committing any local changes. All changes either locally added or downloaded
+from the source repository will be merged and then synchronized with the private GitHub repository on the user profile.</p>	
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl –S dev
+Fetching origin
+Fetching upstream
+From https://github.com/xmpl-tool/xmpl-repo
+* [new branch]
+master
+-> upstream/master
+3 file/s changed!
+commands/echo/Print current working directory.xmpl
+commands/echo/Print my message on screen.xmpl
+commands/echo/echo.desc
+Do you want to synchronize 'dev' repository? [Y/n]
+y
+Already up-to-date.
+Already up-to-date.
+[master 179aa19] 3 file/s changed (echo) 
+commands/echo/Print current working directory.xmpl commands/echo/Print my message on screen.xmpl
+commands/echo/echo.desc
+3 files changed, 8 insertions(+)
+create mode 100644 commands/echo/Print current working directory.xmpl
+create mode 100644 commands/echo/Print my message on screen.xmpl
+create mode 100644 commands/echo/echo.desc
+Username for 'https://github.com': xmpltest
+Password for 'https://xmpltest@github.com': ********
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (7/7), 745 bytes | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/xmpltest/xmpl-repo
+2fe9048..179aa19 master -> master</pre>
+	</div>
+	<p>The synchronization is in this case two-way, and needs to be authorized by the GitHub user whose repository is being edited. (<i>remote main&gt;&gt; local private &gt;&gt; remote private</i>)</p>
+	<p>By this step, all changes are only entered in private repository and they are not available to other users of Xmpl tool, unless they specifically add your private repository as a source of examples in the
+Xmpl tool.</p>
+</div></div>
+
+
+</div>
+<div id="s_publication" class="sectionTitle">3.5. Publication of changes</div>
+
+<div class="tekst odlomak documentation">
+	<div class="command">--pull-request [<i>repo_alias</i>] -P [<i>repo_alias</i>]</div>
+	<p>The option <i>--pull-request</i> or <i>-P</i> is used to release all private changes to the Xmpl main repository.</p>
+	<p>If a local pseudonym is not forwarded after the <i>--pull-request</i> option, the tool will try to publish the last set default repository.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -p dev</pre>
+	</div>
+	<p>This step before publication includes the <i>synchronization of the private repository (3.4.2)</i>.</p>
+	<p>If you do not already have an open pull request, the Xmpl tool will try to publish all last changes you&#39;ve made, prompting the user to enter the title and body of the new pull request.</p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">Fetching origin
+Fetching upstream
+Repository up to date!
+Enter pull request title:
+simple echo examples
+Enter pull request body:
+simple echo examples</pre>
+		</div>
+
+	<p>After briefly explaining newly-created examples or changes, the Xmpl tool will prompt the user to authorize the request with their GitHub password.</p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">Enter host password for user 'xmpltest': **********
+<span class="f3">Pull request successfull!</span></pre>
+		</div>
+	<p>Synchronization is currently performed between remote repositories (<i>remote private &gt;&gt; remote main</i>).</p>
+	<p>If a pull request already exists, all new changes will be supplemented on an already open request, until it is approved by an xmpl-tool organization member.</p>
+	<p>After one of the <i>xmpl-tool</i> organization members evaluates and approves the submitted changes, they will become available to all Xmpl users in the Xmpl main repository.</p>
+	<p>If the original (<i>source</i>) repository is owned by another user, they respond and approve all changes on his repository.</p>
+
+</div>
+
+
+<div id="s_deliting_repository" class="sectionTitle">3.6. Deleting a local repository</div>
+
+<div class="tekst odlomak documentation">
+	<div class="command">--remove-repo [<i>repo_alias</i>] -m [<i>repo_alias</i>]</div>
+	<p>Deleting an existing local repository is possible by using the <i>--remove-repo</i> or <i>-m</i> option, appending a local pseudonym for a repository that the user wants to delete from the local machine.</p>
+	<div style="overflow-x: scroll;">
+	<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -m custom
+<span class="f3">Delete local repository 'custom' (xmpltest/custom-xmpl)?  [y/N]</span>
+y
+Deleting xmpltest/custom-xmpl
+<span class="f3">Repository 'custom' successfully deleted from local system!
+Using repository: main (xmpl-tool/xmpl-repo)</span></pre>
+	</div>
+	<p>Deleting a local repository refers only to local files. The deletion of the repository from the GitHub profile has to be done manually on the GitHub website:</p>
+	<p><a href="https://help.github.com/en/articles/deleting-a-repository" target="_blank" />https://help.github.com/en/articles/deleting-a-repository</a></p>
+</div>
+
+</div>
+
+<div  id="s_other_options" class="mainTitle">4. Other options</div>
+
+<div class="odlomak">
+
+
+<div id="s_show_version" class="sectionTitle">4.1. Show version</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--version -v</div>
+	<p>To display the currently used version of the tool, use the <i>--version</i> or <i>-v</i> option after which the current version will be printed in the console:</p>
+	<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console"><span class="bold">$:</span> xmpl -v
+<span class="f3">xmpl-tool 1.0.9</span></pre>
+		</div>
+</div>
+
+<div id="s_show_help" class="sectionTitle">4.2. Show help</div>
+<div class="tekst odlomak documentation">
+	<div class="command">--help -h -?</div>
+	<p>To print all the options available for use with Xmpl tool, use option <i>--help</i> or <i>-h</i> or <i>-?</i>.</p>
+	<p>Depending on whether Xmpl tool is installed on a computer or not, the available options will be printed.</p>
+</div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_noinstall_help" class="sectionTitle">4.2.1. Help in no-install usage</div>
+<div class="box">
+	<div class="tekst odlomak documentation">
+<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">No-install usage:
+	
+ xmpl
+	filter_1 filter_2
+	[--search] filter_1 filter_2
+	[--package] package
+	[--input] [--execute] [--execute-last] argument_1 argument_2
+	[--comments] [--raw] [--online] [--full-online] [--last] [--install] [--version] [--help]
+
+
+ xmpl 					List available packages
+ 
+   [&lt;query&gt;]				Search all examples with query
+  
+   -s [&lt;query&gt;]		 --search	Search examples with query
+   -p [package]		 --package	Filter by package
+  
+   -c			 --comments	Display comments in examples
+   -C			 --raw		Display raw example
+  
+   -O 			 --full-online	Force online mode with descriptions
+   
+   -i [&lt;arguments&gt;]	 --input	Input mode
+   -x [&lt;arguments&gt;]	 --execute	Execute mode
+   
+   -l			 --last		Show last selected example
+   -X [&lt;arguments&gt;]	 --execute-last	Execute last selected example
+  
+   -I			 --install	Install on local system
+   -v			 --version	Display version
+   -? / -h		 --help		Show xmpl help page
+</pre>
+	</div>
+
+</div>
+</div></div>
+
+<div class="alignLeft itemData odlomak">
+<div id="s_full_help" class="sectionTitle">4.2.2. Help in installed usage</div>
+<div class="box">
+	<div class="tekst odlomak documentation">
+<div style="overflow-x: scroll;">
+		<pre class="f9 b9 console">Full usage:
+	
+ xmpl
+	filter_1 filter_2
+	[--search] filter_1 filter_2
+	[--package] [--edit] [--editor] [--delete] package
+	[--input] [--execute] [--execute-last] argument_1 argument_2
+	[--new-repo] github_user/repo
+	[--remove-repo] [--change-repo] [--save-repo]
+	[--sync-repo] [--pull-request] repo_alias
+	[--comments] [--raw] [--online] [--full-online] [--last] 	
+	[--install] [--update] [--uninstall] [--version] [--help]
+
+
+ xmpl 					List available packages
+ 
+   [&lt;query&gt;]				Search all examples with query
+  
+   -s [&lt;query&gt;]		 --search	Search examples with query
+   -p [package]		 --package	Filter by package
+  
+   -c			 --comments	Display comments in examples
+   -C			 --raw		Display raw example
+  
+   -o 			 --online	Force online mode
+   -O 			 --full-online	Force online mode with descriptions
+   
+   -i [&lt;arguments&gt;]	 --input	Input mode
+   -x [&lt;arguments&gt;]	 --execute	Execute mode
+   
+   -l			 --last		Show last selected example
+   -X [&lt;arguments&gt;]	 --execute-last	Execute last selected example
+  
+   -I			 --install	Install on local system
+   -U			 --update	Update to latest version
+   -D			 --uninstall	Uninstall from local system
+   
+   -n [github_user/repo] --new-repo	Add new private repository
+   -m [repo_alias]	 --remove-repo	Delete local repository
+   
+   -r [repo_alias]	 --change-repo	Switch repository source
+   -R [repo_alias]	 --save-repo	Switch and store repository source
+   
+   -e [package]		 --edit		Edit examples in private repository
+   -E [package]		 --editor	Edit multiline examples in private repository
+   -d [package]		 --delete	Delete example or package in private repository
+   
+   -S [repo_alias]	 --sync-repo	Synchronize local and remote repository
+   -P [repo_alias]	 --pull-request	Send changes to xmpl main repository
+	
+   -v			 --version	Display version
+   -? / -h		 --help		Show xmpl help page
+</pre>
+	</div>
+</div>
+</div></div>
+</div>
+
 
 
 </div><br>
+
 <div id="footer" class="item inner"> 
 
-<center>Copyright (c) <a href="behind-xmpl.html">Xmpl project</a> 2018.</center>
+<center>Copyright (c) <a href="behind-xmpl.html">Xmpl project</a> 2019.</center>
 
 </div>
 </div>
